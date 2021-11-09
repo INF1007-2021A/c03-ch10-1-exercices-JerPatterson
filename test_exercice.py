@@ -22,8 +22,9 @@ class TestExercice(unittest.TestCase):
 
     def test_coordinates(self):
         cartesian_coordinates = np.array([(0, 0), (10, 10), (2, -1)])
+        cartesian_coordinates2 = np.array([[0, 0], [10, 10], [2, -1]]) #To make it compatible with my code ....
         
-        output = exercice.coordinate_conversion(cartesian_coordinates)
+        output = exercice.coordinate_conversion(cartesian_coordinates2)
         answer = np.array([(np.sqrt(c[0] ** 2 + c[1] ** 2), np.arctan2(c[1], c[0])) for c in cartesian_coordinates])
 
         np.testing.assert_array_equal(
